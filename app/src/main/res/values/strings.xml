@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Gallery</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_dphoto">Name Photo</string>
+    <string name="description">Description</string>
+    <string name="images_photos">images</string>
+    <string name="PhotographApp">app_name</string>
+    <string name="photo">Album</string>
+    <string name="butoon_save">botón Guarda</string>
+    <string name="Ingredients">Photos</string>
+</resources>

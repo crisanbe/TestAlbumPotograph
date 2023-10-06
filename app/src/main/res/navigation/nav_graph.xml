@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPhotographs">
+
+    <fragment
+        android:id="@+id/mainPhotographs"
+        android:name="com.cvelez.photos.ui.MainPhotographs"
+        android:label="Album"
+        tools:layout="@layout/fragment_main_photographs">
+        <action
+            android:id="@+id/action_mainPhotographs_to_details"
+            app:destination="@id/details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+            <argument
+                android:name="photo"
+                app:argType="com.cvelez.photos.data.model.AlbumItem"
+                app:nullable="false" />
+
+        </action>
+        <action
+            android:id="@+id/action_mainPhotographs_to_favoritesFragment"
+            app:destination="@id/favoritesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.cvelez.photos.ui.photodetails.Details"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="photo"
+            app:argType="com.cvelez.photos.data.model.AlbumItem"
+            app:nullable="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.cvelez.photos.ui.favorites.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_details"
+            app:destination="@id/details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/favoritesFragment">
+
+            <argument
+                android:name="photo"
+                app:argType="com.cvelez.photos.data.model.AlbumItem"
+                app:nullable="false" />
+
+        </action>
+    </fragment>
+</navigation>
