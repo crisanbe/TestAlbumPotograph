@@ -4,6 +4,7 @@ listado se debe permitir que el usuario seleccione uno de los elementos y navegu
 pantalla de detalle del elemento en particular, por ultimo en la pantalla de detalle de la fotografía,
 se debe implementar un botón para eliminar la fotografía y llamar al servicio DELETE:
 aplicativo debe guardar esta operación en memoria
+
 ![](https://i.imgur.com/7i7fNGll.png)![](https://i.imgur.com/L2m2aopl.png)![](https://i.imgur.com/rBBjD8Xl.png)![](https://i.imgur.com/xsrVZDzl.png)![](https://i.imgur.com/usghTsIl.png)
 
 # Características principales
