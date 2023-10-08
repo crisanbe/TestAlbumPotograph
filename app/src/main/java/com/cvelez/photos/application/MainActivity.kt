@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), InternetConnectionCallback {
             .setCallback(this)
             .register()
 
-            Thread.sleep(1000)
+            Thread.sleep(3000)
             installSplashScreen()
             setContentView(R.layout.activity_main)
 
