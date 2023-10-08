@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.cvelez.photos
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
