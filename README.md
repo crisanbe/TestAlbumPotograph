@@ -5,7 +5,7 @@ pantalla de detalle del elemento en particular, por ultimo en la pantalla de det
 se debe implementar un botón para eliminar la fotografía y llamar al servicio DELETE:
 aplicativo debe guardar esta operación en memoria
 
-![](https://i.imgur.com/sxruxQal.png)![](https://i.imgur.com/o6Rxshfl.png)![](https://i.imgur.com/gnwwHKEl.png)![](https://i.imgur.com/1IcmGajl.png)![](https://i.imgur.com/usghTsIl.png)
+![](https://i.imgur.com/sxruxQal.png)![](https://i.imgur.com/o6Rxshfl.png)![](https://i.imgur.com/gnwwHKEl.png)![](https://i.imgur.com/1IcmGajl.png)![](https://i.imgur.com/usghTsIl.png)![](https://i.imgur.com/jNy6G3il.png)![](![](https://i.imgur.com/jNy6G3il.png))
 
 # Características principales
 1. Kotlin
