@@ -23,7 +23,7 @@ class DefaultPhotographsRepository @Inject constructor(
     private val localDataSource: LocalDataSource
 ) : PhotographRepository {
 
-    override suspend fun getPhotographById(photoId: String): Flow<Resource<List<AlbumItem>>> =
+    override suspend fun getPhotographById(photoId: String): Flow<Resource.Success<List<AlbumItem>>> =
         callbackFlow {
 
             trySend(getCachedPhotographs(photoId)).isSuccess
@@ -64,7 +64,7 @@ class DefaultPhotographsRepository @Inject constructor(
         localDataSource.deletePhotograph(photo)
     }
 
-    override suspend fun getCachedPhotographs(photoId: String): Resource<List<AlbumItem>> {
+    override suspend fun getCachedPhotographs(photoId: String): Resource.Success<List<AlbumItem>> {
         return localDataSource.getCachedPhotographs(photoId)
     }
 }

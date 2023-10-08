@@ -27,7 +27,7 @@ class LocalDataSource @Inject constructor(private val photographDao: PhotographD
         photographDao.savePhotograph(photo)
     }
 
-    suspend fun getCachedPhotographs(photo: String): Resource<List<AlbumItem>> {
+    suspend fun getCachedPhotographs(photo: String): Resource.Success<List<AlbumItem>> {
         return Resource.Success(photographDao.getPhotographs(photo).asDrinkList())
     }
 
