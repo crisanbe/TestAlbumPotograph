@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cvelez.photos.core.BaseViewHolder
 import com.cvelez.photos.data.model.AlbumItem
 import com.bumptech.glide.Glide
+import com.cvelez.photos.R
 import com.cvelez.photos.databinding.PhotographRowBinding
 
 
@@ -56,6 +57,9 @@ class MainAdapter(
             Glide.with(context)
                 .load(item.url)
                 .centerCrop()
+                .circleCrop()
+                .placeholder(R.drawable.icono_logo)
+                .error(R.drawable.ic_baseline_error_outline)
                 .into(imgPhotograph)
 
             textName.text = item.title

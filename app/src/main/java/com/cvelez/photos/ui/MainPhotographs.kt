@@ -1,5 +1,7 @@
 package com.cvelez.photos.ui
 
+import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.*
