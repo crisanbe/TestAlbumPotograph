@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity(), InternetConnectionCallback {
     override fun onConnected() {
         showNoInternetDialog(this,"Hay conexión 🛜","Ya puedes continuar👌.")
     }
-
     override fun onDisconnected() {
         showNoInternetDialog(this,"No hay conexión 🔌","Por favor, verifica tu conexión y vuelve a intentarlo.")
     }
