@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cvelez.photos">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,13 +8,14 @@
     <application
         android:name="com.cvelez.photos.application.CustomApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_gallery_background"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_gallery_round"
         android:supportsRtl="true"
+        tools:targetApi="33"
         android:theme="@style/Theme.Photograph">
-        <activity
-            android:name="com.cvelez.photos.application.MainActivity"
+        <activity android:name="com.cvelez.photos.application.MainActivity"
+            android:theme="@style/AppTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
