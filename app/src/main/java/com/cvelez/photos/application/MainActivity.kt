@@ -1,7 +1,6 @@
 package com.cvelez.photos.application
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
@@ -49,9 +48,9 @@ class MainActivity : AppCompatActivity(), InternetConnectionCallback {
         InternetConnectionObserver.unRegister()
     }
     override fun onConnected() {
-        showNoInternetDialog(this,"Hay conexión 🛜","Ya puedes continuar👌.")
+        showNoInternetDialog(this,"Hay conexión","Ya puedes continuar👌.",R.drawable.wifisignal)
     }
     override fun onDisconnected() {
-        showNoInternetDialog(this,"No hay conexión 🔌","Por favor, verifica tu conexión y vuelve a intentarlo.")
+        showNoInternetDialog(this,"No hay conexión","Por favor, verifica tu conexión y vuelve a intentarlo.",R.drawable.wifioffline)
     }
 }

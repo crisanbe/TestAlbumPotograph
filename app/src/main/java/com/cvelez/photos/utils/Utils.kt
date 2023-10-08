@@ -5,7 +5,6 @@ import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.DialogTitle
 import androidx.fragment.app.Fragment
 
 inline fun SearchView.onQueryTextChanged(crossinline onQueryTextChanged: (String) -> Unit) {
@@ -22,10 +21,11 @@ inline fun SearchView.onQueryTextChanged(crossinline onQueryTextChanged: (String
     })
 }
 
-fun showNoInternetDialog(context: Context, title: String, message: String) {
+fun showNoInternetDialog(context: Context, title: String, message: String, icon: Int) {
     AlertDialog.Builder(context)
         .setTitle(title)
         .setMessage(message)
+        .setIcon(icon)
         .setPositiveButton("OK", null)
         .show()
 }
