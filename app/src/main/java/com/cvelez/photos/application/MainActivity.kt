@@ -53,4 +53,10 @@ class MainActivity : AppCompatActivity(), InternetConnectionCallback {
     override fun onDisconnected() {
         showNoInternetDialog(this,"No hay conexión","Por favor, verifica tu conexión y vuelve a intentarlo.",R.drawable.wifioffline)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
 }
