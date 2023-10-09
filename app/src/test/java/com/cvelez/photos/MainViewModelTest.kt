@@ -2,12 +2,12 @@ package com.cvelez.photos
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.SavedStateHandle
-import com.cvelez.photos.application.ToastHelper
+import com.cvelez.photos.utils.ToastHelper
 import com.cvelez.photos.core.Resource
 import com.cvelez.photos.data.model.AlbumItem
-import com.cvelez.photos.data.remote.WebService
-import com.cvelez.photos.domain.PhotographRepository
-import com.cvelez.photos.presentacion.MainViewModel
+import com.cvelez.photos.data.remote.ApiService
+import com.cvelez.photos.domain.usecase.GetPhotographsUseCase
+import com.cvelez.photos.ui.viewmodel.MainViewModel
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK
@@ -31,7 +31,7 @@ class MainViewModelTest {
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @RelaxedMockK
-    lateinit var repository: PhotographRepository
+    lateinit var getPhotographsUseCase: GetPhotographsUseCase
 
     @RelaxedMockK
     lateinit var toastHelper: ToastHelper
@@ -40,7 +40,7 @@ class MainViewModelTest {
     lateinit var savedStateHandle: SavedStateHandle
 
     private lateinit var viewModel: MainViewModel
-    private var service = retrofit.create(WebService::class.java)
+    private var service = retrofit.create(ApiService::class.java)
     companion object{
         private lateinit var retrofit: Retrofit
 
@@ -58,8 +58,8 @@ class MainViewModelTest {
     fun setup() {
         MockKAnnotations.init(this)
         savedStateHandle.set("1", "someValue")
-        viewModel = MainViewModel(repository, toastHelper,savedStateHandle)
-        service = retrofit.create(WebService::class.java)
+        viewModel = MainViewModel(getPhotographsUseCase, toastHelper,savedStateHandle)
+        service = retrofit.create(ApiService::class.java)
     }
 
     @Test
@@ -83,7 +83,7 @@ class MainViewModelTest {
         runBlocking {
             // Given
             val mockPhotograph = AlbumItem(1, "title", 1, "htpps://url", "https://test")
-            coEvery { repository.getPhotographById("1") } returns flowOf(Resource.Success(listOf(mockPhotograph) ))
+            coEvery { getPhotographsUseCase.getPhotographById("1") } returns flowOf(Resource.Success(listOf(mockPhotograph) ))
 
             // When
             viewModel.setPhotograph("1")

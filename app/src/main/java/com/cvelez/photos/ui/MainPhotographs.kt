@@ -1,7 +1,5 @@
 package com.cvelez.photos.ui
 
-import android.app.AlertDialog
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -15,13 +13,13 @@ import com.cvelez.photos.R
 import com.cvelez.photos.core.Resource
 import com.cvelez.photos.data.model.AlbumItem
 import com.cvelez.photos.databinding.FragmentMainPhotographsBinding
-import com.cvelez.photos.presentacion.MainViewModel
+import com.cvelez.photos.ui.viewmodel.MainViewModel
 import com.cvelez.photos.utils.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainPhotographs : Fragment(R.layout.fragment_main_photographs),
-    MainAdapter.OnDrinkClickListener {
+    MainAdapter.OnPhotoClickListener {
     private val viewModel by activityViewModels<MainViewModel>()
     private lateinit var mainAdapter: MainAdapter
 

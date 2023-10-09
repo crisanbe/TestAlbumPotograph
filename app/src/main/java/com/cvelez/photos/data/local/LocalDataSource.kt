@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import com.cvelez.photos.data.model.*
 import com.cvelez.photos.core.Resource
+import com.cvelez.photos.core.mapper.asDrinkList
+import com.cvelez.photos.core.mapper.asDrinkLists
+import com.cvelez.photos.core.mapper.asFavoriteEntity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
 

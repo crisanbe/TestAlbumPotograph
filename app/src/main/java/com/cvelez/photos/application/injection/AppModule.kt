@@ -3,9 +3,9 @@ package com.cvelez.photos.application.injection
 import android.content.Context
 import androidx.room.Room
 import com.cvelez.photos.data.local.AppDatabase
-import com.cvelez.photos.data.remote.WebService
-import com.cvelez.photos.application.AppConstants.BASE_URL
-import com.cvelez.photos.application.AppConstants.DATABASE_NAME
+import com.cvelez.photos.data.remote.ApiService
+import com.cvelez.photos.utils.AppConstants.BASE_URL
+import com.cvelez.photos.utils.AppConstants.DATABASE_NAME
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -43,5 +43,5 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideWebService(retrofit: Retrofit): WebService = retrofit.create(WebService::class.java)
+    fun provideWebService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
 }

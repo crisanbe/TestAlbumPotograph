@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.cvelez.photos.R
 import com.cvelez.photos.data.model.AlbumItem
 import com.cvelez.photos.databinding.FragmentDetailsBinding
-import com.cvelez.photos.presentacion.MainViewModel
+import com.cvelez.photos.ui.viewmodel.MainViewModel
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

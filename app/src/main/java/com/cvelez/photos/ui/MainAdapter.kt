@@ -14,12 +14,12 @@ import com.cvelez.photos.databinding.PhotographRowBinding
 
 class MainAdapter(
     private val context: Context,
-    private val itemClickListener: OnDrinkClickListener,
+    private val itemClickListener: OnPhotoClickListener,
 ) : RecyclerView.Adapter<BaseViewHolder<*>>() {
 
     private var photosList = listOf<AlbumItem>()
 
-    interface OnDrinkClickListener {
+    interface OnPhotoClickListener {
         fun onPhotographClick(photo: AlbumItem, position: Int)
     }
 

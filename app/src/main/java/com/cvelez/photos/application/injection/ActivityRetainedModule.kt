@@ -1,7 +1,7 @@
 package com.cvelez.photos.application.injection
 
-import com.cvelez.photos.domain.DefaultPhotographsRepository
-import com.cvelez.photos.domain.PhotographRepository
+import com.cvelez.photos.data.repository.DefaultPhotographsRepositoryImpl
+import com.cvelez.photos.domain.repository.PhotographRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,5 +14,5 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @InstallIn(ActivityRetainedComponent::class)
 abstract class ActivityRetainedModule {
     @Binds
-    abstract fun dataSource(impl: DefaultPhotographsRepository): PhotographRepository
+    abstract fun dataSource(impl: DefaultPhotographsRepositoryImpl): PhotographRepository
 }

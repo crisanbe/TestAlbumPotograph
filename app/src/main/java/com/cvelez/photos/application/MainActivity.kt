@@ -10,6 +10,7 @@ import com.cvelez.photos.R
 import com.cvelez.photos.core.observe
 import com.cvelez.photos.utils.InternetConnectionCallback
 import com.cvelez.photos.utils.InternetConnectionObserver
+import com.cvelez.photos.utils.ToastHelper
 import com.cvelez.photos.utils.showNoInternetDialog
 import com.cvelez.photos.utils.showToast
 import dagger.hilt.android.AndroidEntryPoint
